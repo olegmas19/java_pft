@@ -114,7 +114,7 @@ case "$( uname )" in                #(
   NONSTOP* )        nonstop=true ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/sandbox.jar
+CLASSPATH=$APP_HOME/lib/sandbox.jar:$APP_HOME/lib/testng-7.9.0.jar:$APP_HOME/lib/logback-classic-1.4.14.jar:$APP_HOME/lib/slf4j-api-2.0.7.jar:$APP_HOME/lib/jcommander-1.82.jar:$APP_HOME/lib/jquery-3.7.1.jar:$APP_HOME/lib/logback-core-1.4.14.jar
 
 
 # Determine the Java command to use to start the JVM.
@@ -205,7 +205,7 @@ fi
 
 set -- \
         -classpath "$CLASSPATH" \
-        HelloWorld \
+        ru.stqa.pft.sandbox.MyFirstProgram1 \
         "$@"
 
 # Stop when "xargs" is not available.
